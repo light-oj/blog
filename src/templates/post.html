@@ -93,11 +93,13 @@
                       <div class="row">
                       {{ form }}
                       <div class="form-group col-md-12">
-                        <button type="submit" class="btn btn-secondary">Submit Comment</button>
+                        <a href="{% url 'account_login' %}" class="btn btn-secondary">Submit Comment</a>
                       </div>
                     </div>
                   </form>
                 </div>
+                {% else%}
+                <button type="submit" class="btn btn-primary">Login to comment</button>
                 {% endif %}
               </div>
             </div>

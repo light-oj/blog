@@ -172,3 +172,6 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
+
+ACCOUNT_LOGOUT_REDIRECT_URL ='/'
+LOGIN_REDIRECT_URL = '/' # default to /accounts/profile 

@@ -142,3 +142,7 @@ def post_delete(request, id):
     post = get_object_or_404(Post, id=id)
     post.delete()
     return redirect(reverse("post-list"))
+
+
+def contact(request):
+    return render(request, 'contact.html', {})

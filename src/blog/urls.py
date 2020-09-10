@@ -8,7 +8,7 @@ from filebrowser.sites import site
 from posts.views import (
     index, blog, post, 
     search, post_create, 
-    post_update, post_delete)
+    post_update, post_delete, contact)
 
 
 urlpatterns = [
@@ -17,6 +17,7 @@ urlpatterns = [
     path('blog/', blog, name='post-list'),
     path('search/', search, name='search'),
     path('create/', post_create, name='post-create'),
+    path('contact/', contact, name='contact'),
     path('post/<id>/', post, name='post-detail'),
     path('post/<id>/update/', post_update, name='post-update'),
     path('post/<id>/delete/', post_delete, name='post-delete'),

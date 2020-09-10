@@ -9,7 +9,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-7">
-            <h1>Bootstrap 4 Blog - A free template by Bootstrap Temple</h1><a href="#" class="hero-link">Discover More</a>
+            <h1>Welcome to my Blog</h1><a href="#" class="hero-link">Discover More</a>
           </div>
         </div><a href=".intro" class="continue link-scroll"><i class="fa fa-long-arrow-down"></i> Scroll Down</a>
       </div>
@@ -19,8 +19,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-            <h2 class="h3">Some great intro here</h2>
-            <p class="text-big">Place a nice <strong>introduction</strong> here <strong>to catch reader's attention</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.</p>
+            <h2 class="h3">Hey! I'm Akọ́ládé.</h2>
+            <p class="text-big">I am a <strong>Data Scientist</strong> and <strong>Web Developer</strong>.<br/> Here is where I <strong>write</strong> about interesting stuffs I am <strong>learning</strong>.<br/> Learn with me!</p>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
                   <a href="#">{{ cat }}</a>
                   {% endfor %}
                   </div>
-                  <a href="post.html">
+                  <a href="{{obj.get_absolute_url }}">
                     <h2 class="h4">{{ obj.title }}</h2></a>
                 </header>
                 <p>{{ obj.overview }}</p>
@@ -67,7 +67,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7">
-            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2><a href="#" class="hero-link">View More</a>
+            <h2><i>“Learning is a treasure that will follow its owner everywhere.” — Chinese Proverb</i></h2><a href="/blog" class="hero-link">View Blog</a>
           </div>
         </div>
       </div>
@@ -77,7 +77,7 @@
       <div class="container">
         <header> 
           <h2>Latest from the blog</h2>
-          <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+         <!-- <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
         </header>
         <div class="row">
         {% for obj in latest %}
@@ -91,7 +91,7 @@
                 <a href="#">{{ cat }}</a>
                 {% endfor %}
                 </div>
-              </div><a href="$">
+              </div><a href="{{ obj.get_absolute_url }}">
                 <h3 class="h4">{{ obj.title }}</h3></a>
               <p class="text-muted">{{ obj.overview }}</p>
             </div>
@@ -105,8 +105,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h2>Subscribe to Newsletter</h2>
-            <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2>Subscribe to my newsletter</h2>
+            <!-- <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
           </div>
           <div class="col-md-8">
             <div class="form-holder">
@@ -122,8 +122,10 @@
         </div>
       </div>
     </section>
+    
     <!-- Gallery Section-->
-    <section class="gallery no-padding">    
+     <!-- <section class="gallery no-padding"> 
+      
       <div class="row">
         <div class="mix col-lg-3 col-md-3 col-sm-6">
           <div class="item"><a href="img/gallery-1.jpg" data-fancybox="gallery" class="image"><img src="{% static 'img/gallery-1.jpg' %}" alt="..." class="img-fluid">
@@ -141,7 +143,7 @@
           <div class="item"><a href="img/gallery-4.jpg" data-fancybox="gallery" class="image"><img src="{% static 'img/gallery-4.jpg' %}" alt="..." class="img-fluid">
               <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
         </div>
-      </div>
-    </section>
+      </div> 
+    </section> -->
 
 {% endblock content %}

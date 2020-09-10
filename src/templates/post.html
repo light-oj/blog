@@ -24,10 +24,12 @@
                   <a href="#">{{ cat }}</a>
                    {% endfor %}
                   </div>
+                  {% if request.user.is_staff %}
                   <div>
                   <a class="btn btn-success" href="{% url 'post-update' id=post.id%}">Update</a>
                   <a class="btn btn-danger" href="{% url 'post-delete' id=post.id%}">Delete</a>
                   </div>
+                  {% endif %}
                 </div>
                 <h1>{{ post.title }}<a href="#"><i class="fa fa-bookmark-o"></i></a></h1>
                 <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><a href="#" class="author d-flex align-items-center flex-wrap">
@@ -93,13 +95,13 @@
                       <div class="row">
                       {{ form }}
                       <div class="form-group col-md-12">
-                        <a href="{% url 'account_login' %}" class="btn btn-secondary">Submit Comment</a>
+                        <button type="submit" class="btn btn-secondary">Submit Comment</button>
                       </div>
                     </div>
                   </form>
                 </div>
                 {% else%}
-                <button type="submit" class="btn btn-primary">Login to comment</button>
+                <a href="{% url 'account_login' %}" class="btn btn-primary">Login to comment</a>
                 {% endif %}
               </div>
             </div>
